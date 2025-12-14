@@ -31,7 +31,7 @@
   "scripts": {
     "clean": "rm -rf dist",
     "build": "tsup",
-    "prepublishOnly": "bun run build",
+    "prepublish": "bun run build",
     "lint": "bun x @biomejs/biome check",
     "lint:fix": "bun run lint --fix",
     "typecheck": "tsc --noEmit"
