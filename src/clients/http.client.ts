@@ -3,8 +3,8 @@ import axios, {
   type AxiosRequestConfig,
   isAxiosError,
 } from 'axios';
-import type { Config } from '../config/config.js';
-import type { ApiResponse } from '../interfaces/api-response.interface.ts';
+import type { Config } from '../config';
+import type { ApiResponse } from '../interfaces';
 
 export class HttpClient {
   public readonly axios: AxiosInstance;
