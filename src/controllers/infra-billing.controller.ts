@@ -49,8 +49,7 @@ export class InfraBillingController {
       DeleteInfraProviderByUuidCommand.Response['response']
     >({
       method: DeleteInfraProviderByUuidCommand.endpointDetails.REQUEST_METHOD,
-      url: DeleteInfraProviderByUuidCommand.url,
-      data,
+      url: DeleteInfraProviderByUuidCommand.url(data.uuid),
     });
   }
 
@@ -72,8 +71,7 @@ export class InfraBillingController {
       GetInfraProviderByUuidCommand.Response['response']
     >({
       method: GetInfraProviderByUuidCommand.endpointDetails.REQUEST_METHOD,
-      url: GetInfraProviderByUuidCommand.url,
-      params: data,
+      url: GetInfraProviderByUuidCommand.url(data.uuid),
     });
   }
 
@@ -110,8 +108,7 @@ export class InfraBillingController {
     >({
       method:
         DeleteInfraBillingNodeByUuidCommand.endpointDetails.REQUEST_METHOD,
-      url: DeleteInfraBillingNodeByUuidCommand.url,
-      data,
+      url: DeleteInfraBillingNodeByUuidCommand.url(data.uuid),
     });
   }
 
@@ -148,8 +145,7 @@ export class InfraBillingController {
     >({
       method:
         DeleteInfraBillingHistoryRecordCommand.endpointDetails.REQUEST_METHOD,
-      url: DeleteInfraBillingHistoryRecordCommand.url,
-      data,
+      url: DeleteInfraBillingHistoryRecordCommand.url(data.uuid),
     });
   }
 

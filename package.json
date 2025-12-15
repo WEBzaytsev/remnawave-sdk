@@ -1,6 +1,6 @@
 {
   "name": "@webzaytsev/remnawave-sdk",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "author": "WEBzaytsev <github.com/WEBzaytsev>",
   "homepage": "https://github.com/WEBzaytsev/remnawave-sdk",
   "repository": {
@@ -59,7 +59,7 @@
     }
   },
   "dependencies": {
-    "@remnawave/backend-contract": "2.2.32",
+    "@remnawave/backend-contract": "^2.3.59",
     "axios": "^1.13.1",
     "zod": "^4.1.12"
   }
