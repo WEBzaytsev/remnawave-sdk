@@ -13,6 +13,7 @@ import {
   EnableUserCommand,
   GetAllTagsCommand,
   GetAllUsersCommand,
+  GetStatsUserUsageCommand,
   GetUserAccessibleNodesCommand,
   GetUserByEmailCommand,
   GetUserByShortUuidCommand,
@@ -21,7 +22,6 @@ import {
   GetUserByUsernameCommand,
   GetUserByUuidCommand,
   GetUserSubscriptionRequestHistoryCommand,
-  GetUserUsageByRangeCommand,
   ResetUserTrafficCommand,
   RevokeUserSubscriptionCommand,
   UpdateUserCommand,
@@ -206,13 +206,13 @@ export class UserController {
 
   public async getUserUsageByRange(
     uuid: string,
-    query: GetUserUsageByRangeCommand.RequestQuery,
-  ): Promise<GetUserUsageByRangeCommand.Response['response']> {
+    query: GetStatsUserUsageCommand.RequestQuery,
+  ): Promise<GetStatsUserUsageCommand.Response['response']> {
     return this.httpClient.callApi<
-      GetUserUsageByRangeCommand.Response['response']
+      GetStatsUserUsageCommand.Response['response']
     >({
-      method: GetUserUsageByRangeCommand.endpointDetails.REQUEST_METHOD,
-      url: GetUserUsageByRangeCommand.url(uuid),
+      method: GetStatsUserUsageCommand.endpointDetails.REQUEST_METHOD,
+      url: GetStatsUserUsageCommand.url(uuid),
       params: query,
     });
   }
